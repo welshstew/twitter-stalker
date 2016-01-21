@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.1.2'
+    }
+}
+
+plugins{
+    id 'groovy'
+    id 'com.github.johnrengelman.shadow' version '1.2.1'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+group 'org.swinchester.groovy'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile 'org.twitter4j:twitter4j-core:4.0.4'
+    compile 'org.slf4j:slf4j-api:1.7.13'
+    compile 'org.slf4j:slf4j-log4j12:1.7.13'
+    compile 'log4j:log4j:1.2.17'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
